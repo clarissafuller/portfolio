@@ -13,6 +13,7 @@ import AboutIcons from "./components/AboutIcons";
 import { useMemo } from "react";
 import StatBox from "./components/StatBox";
 import CareerTimeline from "./components/CareerTimeline";
+import SkillsList from "./components/SkillsList";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -54,6 +55,8 @@ function App() {
           <h2>About Me</h2>
           <AboutIcons />
           <CareerTimeline />
+          <h2>Skills</h2>
+          <SkillsList />
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12}></Grid>
