@@ -14,6 +14,7 @@ import { useMemo } from "react";
 import StatBox from "./components/StatBox";
 import CareerTimeline from "./components/CareerTimeline";
 import SkillsList from "./components/SkillsList";
+import DateTime from "./components/DateTime";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -51,6 +52,7 @@ function App() {
             style={{ width: "150px", height: "150px", borderRadius: "50%" }}
           />
           <h2>web development, data analysis, and social media</h2>
+          <DateTime />
           <StatBox />
           <h2>About Me</h2>
           <AboutIcons />
