@@ -51,6 +51,7 @@ function App() {
             alt="Clarissa Fuller"
             style={{ width: "150px", height: "150px", borderRadius: "50%" }}
           />
+          <h2>Washington, DC</h2>
           <h2>web development, data analysis, and social media</h2>
           <DateTime />
           <StatBox />
