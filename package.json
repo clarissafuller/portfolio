@@ -11,8 +11,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.22",
-    "@heroicons/vue": "^2.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,7 +24,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.6",
     "vite": "^4.3.2"
   }
 }
