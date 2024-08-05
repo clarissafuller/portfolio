@@ -9,8 +9,10 @@ import {
   Box,
 } from "@mui/material";
 import { deepOrange, grey } from "@mui/material/colors";
+import AboutIcons from "./components/AboutIcons";
 import { useMemo } from "react";
 import StatBox from "./components/StatBox";
+import CareerTimeline from "./components/CareerTimeline";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -49,6 +51,9 @@ function App() {
           />
           <h2>web development, data analysis, and social media</h2>
           <StatBox />
+          <h2>About Me</h2>
+          <AboutIcons />
+          <CareerTimeline />
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12}></Grid>
