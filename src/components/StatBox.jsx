@@ -6,9 +6,30 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-function CustomCard({ title, number, description, detail, buttonText }) {
+function CustomCard({
+  title,
+  number,
+  description,
+  detail,
+  buttonText,
+  scrollToId,
+}) {
+  const handleScroll = () => {
+    const element = document.getElementById(scrollToId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <Card variant="outlined">
+    <Card
+      variant="outlined"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {title}
@@ -25,35 +46,39 @@ function CustomCard({ title, number, description, detail, buttonText }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{buttonText}</Button>
+        <Button size="small" onClick={handleScroll}>
+          {buttonText}
+        </Button>
       </CardActions>
     </Card>
   );
 }
 
 export default function OutlinedCard() {
-  // Example data for multiple cards
   const cardsData = [
     {
       title: "Number of Github Projects",
       number: 6,
-      description: "adjective",
-      detail: "well meaning and kindly.",
+      description: "active",
+      detail: "more details on ReadMe pages",
       buttonText: "Learn More",
+      scrollToId: "career-timeline",
     },
     {
-      title: "Number of Blog Posts",
-      number: 12,
-      description: "noun",
-      detail: "a piece of writing published on the web.",
+      title: "In the workforce",
+      number: 7,
+      description: "years",
+      detail: "experienced and motivated",
       buttonText: "Read More",
+      scrollToId: "career-timeline",
     },
     {
-      title: "Number of Courses Completed",
-      number: 8,
-      description: "noun",
-      detail: "completed educational courses.",
+      title: "I've built or worked on",
+      number: 10,
+      description: "websites",
+      detail: "from scratch or built better",
       buttonText: "View Details",
+      scrollToId: "career-timeline",
     },
   ];
 
@@ -62,10 +87,10 @@ export default function OutlinedCard() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        flexWrap: "wrap", // Allows the cards to wrap on smaller screens
+        alignItems: "flex-start",
+        flexWrap: "wrap",
         gap: 2,
-        minHeight: "100vh",
+        py: 2,
       }}
     >
       {cardsData.map((card, index) => (
@@ -76,6 +101,7 @@ export default function OutlinedCard() {
             description={card.description}
             detail={card.detail}
             buttonText={card.buttonText}
+            scrollToId={card.scrollToId}
           />
         </Box>
       ))}

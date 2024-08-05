@@ -48,6 +48,7 @@ export default function VerticalLinearStepper() {
 
   return (
     <Box
+      id="career-timeline"
       sx={{
         display: "flex",
         justifyContent: "center",

@@ -57,7 +57,7 @@ function App() {
           <StatBox />
           <h2>About Me</h2>
           <AboutIcons />
-          <CareerTimeline />
+          <CareerTimeline id="career-timeline" />
           <h2>Skills</h2>
           <SkillsList />
         </Box>
