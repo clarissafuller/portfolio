@@ -9,9 +9,9 @@ export default defineConfig({
     open: true,
   },
   build: {
+    base: "/portfolio/",
     rollupOptions: {
-      input: "/src/index.html",
+      input: "/index.html",
     },
-    base: "/",
   },
 });
